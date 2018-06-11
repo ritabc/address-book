@@ -17,14 +17,14 @@ $(document).ready(function() {
 
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
     // what does the last() method do?
     $(".contact").last().click(function() {
       $("#show-contact").show();
       $("#show-contact h2").text(newContact.firstName);
       $(".first-name").text(newContact.firstName);
-      $(".last-name".text(newContact.lastName));
+      $(".last-name").text(newContact.lastName);
     })
 
     $("input#new-first-name").val("");
